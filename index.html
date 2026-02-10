@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Скачать программы</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+        sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 50px;
+      color: #2c3e50;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 100%;
+    }
+
+    .btn {
+      display: block;
+      text-decoration: none;
+      background: linear-gradient(145deg, #4b6cb7, #182848);
+      color: white;
+      padding: 25px 30px;
+      border-radius: 15px;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+      );
+      transition: 0.5s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(145deg, #5a7bc7, #283a68);
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-remote {
+      background: linear-gradient(145deg, #3498db, #2980b9);
+    }
+
+    .btn-remote:hover {
+      background: linear-gradient(145deg, #5dade2, #3498db);
+    }
+
+    .btn-excel {
+      background: linear-gradient(145deg, #27ae60, #229954);
+    }
+
+    .btn-excel:hover {
+      background: linear-gradient(145deg, #2ecc71, #27ae60);
+    }
+
+    .btn-word {
+      background: linear-gradient(145deg, #e74c3c, #c0392b);
+    }
+
+    .btn-word:hover {
+      background: linear-gradient(145deg, #ec7063, #e74c3c);
+    }
+
+    .btn-description {
+      display: block;
+      font-size: 16px;
+      opacity: 0.9;
+      margin-top: 8px;
+      font-weight: 400;
+    }
+
+    .icon {
+      margin-right: 12px;
+      font-size: 28px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        font-size: 20px;
+        padding: 20px;
+      }
+
+      .btn-description {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .btn {
+        font-size: 18px;
+        padding: 18px 15px;
+      }
+
+      .icon {
+        font-size: 22px;
+        margin-right: 8px;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <h1>Скачать программы</h1>
+
+      <div class="buttons-container">
+        <a
+          href="https://storage.rudesktop.ru/download/rudesktop-2.9.927-x64.msi"
+          target="_blank"
+          class="btn btn-remote"
+        >
+          <span class="icon">🖥️</span>
+          <span>Первый клик (удаленный доступ)</span>
+          <span class="btn-description">Rudesktop 2.9.927 для Windows x64</span>
+        </a>
+
+        <a
+          href="https://datacloud26.com/load/M0makixbK/Excel_2016_Windows.exe"
+          target="_blank"
+          class="btn btn-excel"
+        >
+          <span class="icon">📊</span>
+          <span>Второй клик (Excel)</span>
+          <span class="btn-description">Microsoft Excel 2016 для Windows</span>
+        </a>
+
+        <a
+          href="https://datacloud26.com/load/xKVq398TK/Word_2016_Windows.exe"
+          target="_blank"
+          class="btn btn-word"
+        >
+          <span class="icon">📝</span>
+          <span>Третий клик (Word)</span>
+          <span class="btn-description">Microsoft Word 2016 для Windows</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
